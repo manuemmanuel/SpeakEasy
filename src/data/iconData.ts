@@ -3,7 +3,7 @@ import { Category, IconItem } from '../types/types';
 // Helper function to create icon URLs with more modern and aesthetic icons
 const iconUrl = (name: string) => `https://api.iconify.design/lucide/${name}.svg?color=%23333`;
 const fillIconUrl = (name: string) => `https://api.iconify.design/solar/${name}-bold.svg?color=%23333`;
-const colorIconUrl = (name: string, color: string = '333') => `https://api.iconify.design/twemoji/${name}.svg`;
+const colorIconUrl = (name: string, _color: string = '333') => `https://api.iconify.design/twemoji/${name}.svg`;
 
 export const categories: Category[] = [
   {

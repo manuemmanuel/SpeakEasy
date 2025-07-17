@@ -1,4 +1,3 @@
-import React from 'react';
 import { IconItem } from '../types/types';
 
 interface IconGridProps {
