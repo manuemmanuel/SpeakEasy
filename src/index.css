@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(circle at 20% 35%, rgba(76, 29, 149, 0.07) 0%, transparent 40%),
+    radial-gradient(circle at 75% 65%, rgba(59, 130, 246, 0.07) 0%, transparent 40%);
+  min-height: 100vh;
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+button, 
+input, 
+select {
+  font-family: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Modern interactive elements */
+button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+/* Game card styles with modern aesthetics */
+.game-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 12px rgba(15, 23, 42, 0.08), 
+    0 0 0 1px rgba(255, 255, 255, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 24px rgba(15, 23, 42, 0.12), 
+    0 0 0 1px rgba(255, 255, 255, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Modern UI elements */
+.game-header {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  box-shadow: 
+    0 4px 12px rgba(15, 23, 42, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.game-tab {
+  border-radius: 14px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.1);
+}
+
+.game-tab.active {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  box-shadow: 
+    0 4px 14px rgba(59, 130, 246, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.game-speak-button {
+  background: linear-gradient(135deg, #f97316, #f43f5e);
+  box-shadow: 
+    0 6px 24px rgba(249, 115, 22, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-speak-button:hover {
+  box-shadow: 
+    0 8px 32px rgba(249, 115, 22, 0.4), 
+    0 0 20px rgba(249, 115, 22, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.game-speak-button:active {
+  transform: scale(0.96) translateY(2px);
+  box-shadow: 
+    0 4px 16px rgba(249, 115, 22, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.game-favorites {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.05));
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 
+    0 4px 12px rgba(15, 23, 42, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Icon styling */
+.icon-container {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 2px 8px rgba(15, 23, 42, 0.08), 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 249, 255, 0.85));
+}
+
+.icon-container:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 4px 12px rgba(15, 23, 42, 0.12), 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Animations */
+@keyframes gentle-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse-animation {
+  animation: gentle-pulse 2s infinite ease-in-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Transitions */
+.card-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #3b82f6, #6366f1);
+}
